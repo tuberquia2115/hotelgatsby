@@ -48,7 +48,6 @@ const ImagenHotel = () => {
         }
       }
     `)
-    console.log(image)
     return (
         <ImageBackground tag="section" fluid={image.sharp.fluid} fadeIn="soft">
             <TextoImagen>

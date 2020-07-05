@@ -1,15 +1,22 @@
 import React from 'react';
-import {css} from '@emotion/core'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 import Navegacion from './nav';
 
+const EnlaceHome = styled(Link)`
+color: #FFF;
+text-align: center;
+text-decoration: none;
+`
 const Header = () => {
-    return ( 
-       <header css={css`
-       background-color: #222;
+    return (
+        <header css={css`
+       background-color: rgb(43, 61, 79);
        padding: 1rem;
        `}>
-           <div
-           css={css`
+            <div
+                css={css`
            max-width: 1200px;
            margin: 0 auto;
 
@@ -19,18 +26,15 @@ const Header = () => {
                justify-content: space-between;
            }
            `}
-           >
-               <h1
-               css={css`
-               color: #fff;
-               text-align: center;
-               `}
-               >Hotel Gatsby</h1>
+            >
+                <EnlaceHome to={'/'}>
+                    <h1>Hotel Gatsby - Tuberquia</h1>
+                </EnlaceHome>
 
-               <Navegacion/>
-           </div>
-       </header>
-     );
+                <Navegacion />
+            </div>
+        </header>
+    );
 }
- 
+
 export default Header;
