@@ -14,7 +14,7 @@ const Footer = ({title}) => {
     return (
         <>
         <footer css={css`
-       background-color: rgb(43, 61, 79);
+       background-color: #F25E7A;
        margin-top: 5rem;
        padding: 1rem;
        `}>
@@ -33,7 +33,7 @@ const Footer = ({title}) => {
                 <Navegacion />
 
                 <EnlaceHome to={'/'}>
-                    <h1>Tuberquia</h1>
+                    <h1>Miranda</h1>
                 </EnlaceHome>
 
             </div>
@@ -41,7 +41,7 @@ const Footer = ({title}) => {
         <p css={css`
         text-align: center;
         color: #FFF;
-        background-color: rgb(33,44,55);
+        background-color: #D91A73;
         margin: 0;
         padding: 1rem;
 

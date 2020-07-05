@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 const Boton = styled(Link)`
 margin-top: 2rem;
 padding: 1rem;
-background-color: rgb(44,62,80, .85);
+background-color: #1976d2;
 width: 100%;
 color: #FFF;
 text-decoration: none;
@@ -22,7 +22,8 @@ const HabitacionPreview = ({ habitacion }) => {
         border: 1px solid #e1e1e1;
         margin-bottom: 2rem;
         `}>
-            <Image fluid={imagen.fluid} />
+            <Image 
+            fluid={imagen.fluid} />
             <div
             css={css`
             padding: 3rem;
@@ -35,7 +36,7 @@ const HabitacionPreview = ({ habitacion }) => {
                 `}
                 >{titulo}</h3>
                 <p>{contenido}</p>
-                <Boton to={slug}>Ver Habitación</Boton>
+                <Boton to={slug}>Ver Pastel</Boton>
             </div>
         </div>
     );

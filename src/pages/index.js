@@ -34,7 +34,7 @@ const IndexPage = () => {
       margin-top: 5rem;
       font-size: 3rem;
       `}>
-        Nuestras habitaciones
+        Nuestros Modelos
       </h2>
 
       <ListadoHabitaciones>

@@ -8,6 +8,7 @@ height: 700px;
 
 `
 
+
 const TextoImagen = styled.div`
     background-image: linear-gradient(to top, rgba(34,49,63,.75), rgba(34,49,63,.75));
     color: #FFF;
@@ -39,7 +40,7 @@ const TextoImagen = styled.div`
 const ImagenHotel = () => {
     const { image } = useStaticQuery(graphql`
     query{
-        image: file(relativePath:{eq:"9.jpg"}) {
+        image: file(relativePath:{eq:"fondo.jpg"}) {
           sharp: childImageSharp{
             fluid {
               ...GatsbyImageSharpFluid_withWebp
@@ -51,8 +52,9 @@ const ImagenHotel = () => {
     return (
         <ImageBackground tag="section" fluid={image.sharp.fluid} fadeIn="soft">
             <TextoImagen>
-                <h1>Bienvenido a Hotel Tuberquia-Gatsby</h1>
-                <p>El mejor hotel para tus vacaciones</p>
+                <h1>Bienvenido  a Pastelería Miranda</h1>
+                <p>No solo los ingredientes hacen rico a un pastel,
+                    el amor con que se hace le da un toque especial.</p>
             </TextoImagen>
         </ImageBackground>
     );

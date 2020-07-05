@@ -12,7 +12,7 @@ text-decoration: none;
 const Header = () => {
     return (
         <header css={css`
-       background-color: rgb(43, 61, 79);
+       background-color:#F25E7A;
        padding: 1rem;
        `}>
             <div
@@ -28,7 +28,7 @@ const Header = () => {
            `}
             >
                 <EnlaceHome to={'/'}>
-                    <h1>Hotel Gatsby - Tuberquia</h1>
+                    <h1>Pastelería Miranda</h1>
                 </EnlaceHome>
 
                 <Navegacion />
