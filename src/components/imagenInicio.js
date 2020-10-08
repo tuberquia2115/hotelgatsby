@@ -37,10 +37,10 @@ const TextoImagen = styled.div`
         }
     }
 `
-const ImagenHotel = () => {
+const ImagenInicio = () => {
     const { image } = useStaticQuery(graphql`
     query{
-        image: file(relativePath:{eq:"fondo.jpg"}) {
+        image: file(relativePath:{eq:"fondo.jpeg"}) {
           sharp: childImageSharp{
             fluid {
               ...GatsbyImageSharpFluid_withWebp
@@ -52,7 +52,7 @@ const ImagenHotel = () => {
     return (
         <ImageBackground tag="section" fluid={image.sharp.fluid} fadeIn="soft">
             <TextoImagen>
-                <h1>Bienvenido  a Pastelería Miranda</h1>
+                <h1>Bienvenido  a Fide Pastelería</h1>
                 <p>No solo los ingredientes hacen rico a un pastel,
                     el amor con que se hace le da un toque especial.</p>
             </TextoImagen>
@@ -60,4 +60,4 @@ const ImagenHotel = () => {
     );
 }
 
-export default ImagenHotel;
+export default ImagenInicio;

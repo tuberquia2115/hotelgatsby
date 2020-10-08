@@ -15,14 +15,15 @@ text-transform: uppercase;
 font-weight: 700;
 text-align: center;
 `
-const HabitacionPreview = ({ habitacion }) => {
-    const { contenido, imagen, titulo, slug } = habitacion
+const PastelPreview = ({ pastel }) => {
+    const { contenido, imagen, titulo, slug } = pastel
     return (
         <div css={css`
         border: 1px solid #e1e1e1;
         margin-bottom: 2rem;
         `}>
             <Image 
+           
             fluid={imagen.fluid} />
             <div
             css={css`
@@ -36,10 +37,10 @@ const HabitacionPreview = ({ habitacion }) => {
                 `}
                 >{titulo}</h3>
                 <p>{contenido}</p>
-                <Boton to={slug}>Ver Pastel</Boton>
+                <Boton to={slug}>Visualizar Pastel</Boton>
             </div>
         </div>
     );
 }
 
-export default HabitacionPreview;
+export default PastelPreview;

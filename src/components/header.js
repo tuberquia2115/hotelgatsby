@@ -12,8 +12,7 @@ text-decoration: none;
 const Header = () => {
     return (
         <header css={css`
-       background-color:#F25E7A;
-       padding: 1rem;
+       background-color:#f2a9aa;
        `}>
             <div
                 css={css`
@@ -28,7 +27,7 @@ const Header = () => {
            `}
             >
                 <EnlaceHome to={'/'}>
-                    <h1>Pastelería Miranda</h1>
+                    <h1>Fide Pastelería</h1>
                 </EnlaceHome>
 
                 <Navegacion />

@@ -1,14 +1,14 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const resultado = await graphql(`
     query {
-        allDatoCmsHabitacio{
+        allDatoCmsPastele{
           nodes{
             slug
             }
           }
         }
     `);
-    // console.log(resultado.data.allDatoCmsHabitacio.nodes)
+    console.log(resultado.data.allDatoCmsPastele.nodes)
 
     if (resultado.errors) {
         reporter.panic('No hubo resultados', resultado.errors)
@@ -16,13 +16,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // sí hay paginas crear los archivos
 
-    const habitaciones = resultado.data.allDatoCmsHabitacio.nodes
-    habitaciones.forEach(habitacion => {
+    const Pasteles = resultado.data.allDatoCmsPastele.nodes
+    Pasteles.forEach(pastel => {
         actions.createPage({
-            path: habitacion.slug,
-            component: require.resolve('./src/components/habitaciones.js'),
+            path: pastel.slug,
+            component: require.resolve('./src/components/Pasteles.js'),
             context: {
-                slug: habitacion.slug
+                slug: pastel.slug
             }
         })
     });

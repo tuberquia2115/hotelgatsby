@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-const useHabitaciones = () => {
+const usePasteles = () => {
   const data = useStaticQuery(graphql`
     query {
-        allDatoCmsHabitacio{
+      allDatoCmsPastele{
           nodes{
             titulo
             id
@@ -19,7 +19,7 @@ const useHabitaciones = () => {
       }
 
     `)
-  return data.allDatoCmsHabitacio.nodes.map(habitacion => ({
+  return data.allDatoCmsPastele.nodes.map(habitacion => ({
     titulo: habitacion.titulo,
     id: habitacion.id,
     contenido: habitacion.contenido,
@@ -29,4 +29,4 @@ const useHabitaciones = () => {
   }))
 }
 
-export default useHabitaciones
+export default usePasteles

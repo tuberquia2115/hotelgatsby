@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
-import ImagenHotel from "../components/imagenHotel"
+import ImagenInicio from "../components/imagenInicio"
 import ContenidoInicio from "../components/contenidoInicio"
-import useHabitaciones from "../hooks/use-habitaciones"
+import usePasteles from "../hooks/use-Pasteles"
 import { css } from '@emotion/core'
-import HabitacionPreview from "../components/habitacionPreview"
+import PastelPreview from "../components/PastelPreview"
 import styled from '@emotion/styled'
 
-const ListadoHabitaciones = styled.ul`
+const ListadoPasteles = styled.ul`
 max-width: 1200px;
 width: 95%;
 margin: 4rem auto 0 auto;
@@ -23,10 +23,11 @@ margin: 4rem auto 0 auto;
 
 
 const IndexPage = () => {
-  const habitaciones = useHabitaciones();
+  const pasteles = usePasteles();
+  console.log('Pasteles:', pasteles)
   return (
     <Layout>
-      <ImagenHotel />
+      <ImagenInicio />
       <ContenidoInicio />
 
       <h2 css={css`
@@ -34,16 +35,16 @@ const IndexPage = () => {
       margin-top: 5rem;
       font-size: 3rem;
       `}>
-        Nuestros Modelos
+        Nuestros Diseños
       </h2>
 
-      <ListadoHabitaciones>
-        {habitaciones.map(habitacion => (
-          <HabitacionPreview
-            key={habitacion.id}
-            habitacion={habitacion} />
+      <ListadoPasteles>
+        {pasteles.map(pastel => (
+          <PastelPreview
+            key={pastel.id}
+            pastel={pastel} />
         ))}
-      </ListadoHabitaciones>
+      </ListadoPasteles>
     </Layout>
   )
 }
